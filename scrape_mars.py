@@ -42,7 +42,7 @@ def scrape_info():
     # Visit Mars Weather Twitter
     url = 'https://twitter.com/marswxreport?lang=en'
     browser.visit(url)
-    time.sleep(1)
+    time.sleep(2)
 
     # Scrape page into Soup
     html = browser.html
@@ -71,7 +71,7 @@ def scrape_info():
     # Gather Hemisphere Photos
     url = 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
     browser.visit(url)
-    time.sleep(7)
+    time.sleep(5)
 
     # Scrape page into Soup
     html = browser.html
@@ -108,14 +108,7 @@ def scrape_info():
                 'jpl_img_url':jpl_img_url,
                 'mars_weather': mars_weather,
                 'mars_info_html': mars_info_html,
-                'hemi_img_title_1': hemi_img_urls[0]['title'],
-                'hemi_img_url_1': hemi_img_urls[0]['img_url'],
-                'hemi_img_title_2': hemi_img_urls[1]['title'],
-                'hemi_img_url_2': hemi_img_urls[1]['img_url'],
-                'hemi_img_title_3': hemi_img_urls[2]['title'],
-                'hemi_img_url_3': hemi_img_urls[2]['img_url'],
-                'hemi_img_title_4': hemi_img_urls[3]['title'],
-                'hemi_img_url_4': hemi_img_urls[3]['img_url'],
+                'hemi_img_urls': hemi_img_urls
     }
 
     # Close the browser after scraping

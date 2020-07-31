@@ -54,38 +54,16 @@
         </div>
     </div>
     <div class="row">
+      {% for hemisphere in mars_data.hemi_img_urls %}
       <div class="col-md-6">
         <div class="card">
-          <img src="{{mars_data.hemi_img_url_1}}" class="card-img-top" alt="{{mars_data.hemi_img_title_1}}" style="width: 500px;">
+          <img src="{{hemisphere.img_url}}" class="card-img-top" alt="{{hemisphere.title}}" style="width: 500px;">
           <div class="card-body">
-            <h3 class="card-title">{{mars_data.hemi_img_title_1}}</h3>
+            <h3 class="card-title">{{hemisphere.title}}</h3>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="card">
-          <img src="{{mars_data.hemi_img_url_2}}" class="card-img-top" alt="{{mars_data.hemi_img_title_2}}" style="width: 500px;">
-          <div class="card-body">
-            <h3 class="card-title">{{mars_data.hemi_img_title_2}}</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card">
-          <img src="{{mars_data.hemi_img_url_3}}" class="card-img-top" alt="{{mars_data.hemi_img_title_3}}" style="width: 500px;">
-          <div class="card-body">
-            <h3 class="card-title">{{mars_data.hemi_img_title_3}}</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card">
-          <img src="{{mars_data.hemi_img_url_4}}" class="card-img-top" alt="{{mars_data.hemi_img_title_4}}" style="width: 500px;">
-          <div class="card-body">
-            <h3 class="card-title">{{mars_data.hemi_img_title_4}}</h3>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </body>
